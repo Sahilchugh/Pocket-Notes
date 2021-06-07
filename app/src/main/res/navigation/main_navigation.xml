@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.pocket.notes.entryStructure.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_onBoardingFragment"
+            app:destination="@id/onBoardingFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/onBoardingFragment"
+        android:name="com.pocket.notes.entryStructure.OnBoardingFragment"
+        android:label="fragment_on_boarding"
+        tools:layout="@layout/fragment_on_boarding" >
+        <action
+            android:id="@+id/action_onBoardingFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.pocket.notes.homeStructure.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_addNotesFragment"
+            app:destination="@id/addNotesFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_editNotesFragment"
+            app:destination="@id/editNotesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addNotesFragment"
+        android:name="com.pocket.notes.homeStructure.AddNotesFragment"
+        android:label="fragment_add_notes"
+        tools:layout="@layout/fragment_add_notes" >
+        <action
+            android:id="@+id/action_addNotesFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:popUpTo="@id/addNotesFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/editNotesFragment"
+        android:name="com.pocket.notes.homeStructure.EditNotesFragment"
+        android:label="fragment_edit_notes"
+        tools:layout="@layout/fragment_edit_notes" >
+        <action
+            android:id="@+id/action_editNotesFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:popUpTo="@id/editNotesFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

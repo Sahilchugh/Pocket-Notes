@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">PocketNotes</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="login_image">Login Image</string>
+    <string name="userimage">userImage</string>
+    <string name="good_morning">Good Morning</string>
+    <string name="hey_ashish">Hey Ashish,</string>
+    <string name="search">Search</string>
+</resources>
